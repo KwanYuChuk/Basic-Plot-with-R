@@ -7,6 +7,9 @@ library(tidyr)
 library(dplyr)
 
 # annual data barplot
+# Open the NetCDF file
+rf2 <- "ridgefield_2015_2024_L6_Summary.nc"
+rf_data2 <- nc_open(rf2)
 
 annual_gpp <- ncvar_get(rf_data2, "Annual/GPP_SOLO")  
 annual_et <- ncvar_get(rf_data2, "Annual/ET")
